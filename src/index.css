@@ -1,0 +1,641 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+#root {
+  overflow: hidden;
+}
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-arrow {
+  background-color: rebeccapurple;
+}
+ 
+@media (max-width: 768px) {
+  .con-2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+ 
+  .box {
+    width: 100%;
+  }
+}
+.slick-slider > button {
+  background-color: black;
+}
+ 
+.custom-marker.harassment .marker-circle {
+  border: 2px solid red;
+  outline: 1px solid rgba(255, 255, 255, 0);
+}
+ 
+.custom-marker.intervention .marker-circle {
+  border: 2px solid green;
+}
+ 
+.custom-marker .marker-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: rgba(205, 45, 45, 0.943);
+ 
+  position: relative;
+}
+ 
+.custom-marker .marker-circle::before {
+  content: "";
+  width: 32px; /* Adjust the width to control the gap size */
+  height: 32px; /* Should be slightly larger than the marker to create a gap */
+  /* border: 3px solid darkgreen; */
+  border-radius: 50%;
+  position: absolute;
+  top: -5px; /* Adjust to control vertical position of the gap */
+  left: -5px; /* Adjust to control horizontal position of the gap */
+}
+ 
+/* Additional styles for the marker, e.g., icon color, size, etc. */
+.custom-marker {
+  color: white; /* Change to your preferred marker color */
+  width: 32px; /* Adjust the marker size as needed */
+  height: 32px;
+  font-weight: bold;
+  font-size: 15px;
+}
+ 
+/* styles.css */
+.custom-circle-marker {
+  fill: #944d3d; /* Fill color */
+  fill-opacity: 0.6; /* Fill opacity */
+  stroke: #ff5733; /* Stroke (border) color */
+  stroke-width: 2; /* Stroke width */
+}
+.custom-green-marker {
+  fill: #455e52; /* Fill color */
+  fill-opacity: 0.6; /* Fill opacity */
+  stroke: #222826; /* Stroke (border) color */
+  stroke-width: 2; /* Stroke width */
+}
+ 
+.text1 {
+  display: flex;
+  text-align: center;
+  justify-content: left;
+  border: 1px solid black;
+  /* position: relative; */
+  padding: 20px;
+  margin-bottom: 50px;
+}
+ 
+.text-item1 {
+  display: flex;
+  padding-right: 50px;
+  margin-right: 50px; /* Adjust this value to control the spacing between images and text */
+  font-weight: 600;
+}
+.text-item2 {
+  display: flex;
+  padding-right: 50px;
+  margin-right: 50px; /* Adjust this value to control the spacing between images and text */
+  font-weight: 600;
+}
+ 
+.red_dot,
+.green_dot {
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+  /* Adjust this value to contrsol the spacing between the images and text */
+}
+ 
+.text-item3 {
+  position: relative;
+  display: inline-block;
+  /* margin-top: 10px; */
+  background-color: #22282694;
+  color: white;
+  border: 2px solid black;
+  /* padding: 10px 20px 10px 20px; */
+ 
+  margin-left: 40%;
+}
+ 
+.button-4 {
+  border-radius: 4px;
+  padding: 9px 18px 9px 18px;
+  cursor: pointer;
+}
+ 
+.upper-dropdown {
+  position: absolute;
+  top: 110%; /* Position the dropdown below the button */
+ 
+  display: none;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 300%;
+}
+ 
+.text-item3 .upper-dropdown {
+  display: block;
+}
+ 
+/* input[type="checkbox"] {
+  margin-right: 5px;
+} */
+ 
+/* Red border for Harassment */
+.harassment .custom-marker .marker-circle {
+  /* border: 2px solid rgb(15, 8, 8); */
+ 
+  outline: 3px solid black; /* To remove the default outline */
+  margin: 5px;
+}
+ 
+.intervention .custom-marker .marker-circle {
+  /* border: 2px solid green; */
+  outline: 3px solid green; /* To remove the default outline */
+  margin: 5px;
+}
+ 
+/* ... Other styles ... */
+ 
+/* Media query for mobile devices (adjust max-width as needed) */
+@media (max-width: 768px) {
+  .text1 {
+    padding: 10px;
+    margin-left: 0;
+    flex-direction: column;
+  }
+  /* .text-item1,
+  .text-item2 {
+    margin-right: 0;
+  }
+  .red_dot,
+  .green_dot {
+    margin-right: 5px;
+  }
+  .text-item3 {
+    margin-top: 5px;
+    width: 20%;
+    margin-left: 0px;
+  }
+ 
+ 
+  .text-item3 .upper-dropdown {
+    display: block;
+    text-align: left;
+    justify-content: left;
+    margin-left: 2px;
+   
+  }
+  .upper-dropdown {
+    width: 100px; /* Make the dropdown full width on mobile */
+}
+ 
+/*
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+ 
+.dropdown-button {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+ 
+.dropdown-button:hover {
+  background-color: #ddd;
+} */
+ 
+/*
+------------------------------------------- */
+ 
+/* ---------------------------------------- */
+ 
+/* WHO WE ARE  CSS */
+ 
+.container-1 {
+  display: flex; /* Use flexbox to create a side-by-side layout */
+}
+ 
+.content {
+  flex: 1; /* Allow the content to grow and take available space */
+  padding: 50px 50px 0px 100px; /* Add some spacing */
+  font-weight: bold;
+  color: rgb(66, 163, 163);
+  font-size: x-large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+ 
+.content-1 {
+  flex: 1; /* Allow the content-1 to grow and take available space */
+ 
+  padding: 50px 50px 0px 100px;
+}
+ 
+.content-1 button {
+  margin: 50px 0px;
+  padding: 10px 50px 10px 50px;
+  color: rgb(66, 163, 163);
+  background-color: white;
+  border: 1px solid rgb(66, 163, 163);
+}
+.content-1 h2 {
+  margin: 0px 0px;
+  font-size: xx-large;
+}
+.content img {
+  margin-top: 50px;
+ 
+  width: 80%;
+}
+ 
+@media (max-width: 768px) {
+  .container-1 {
+    flex-direction: column;
+  }
+ 
+  .content,
+  .content-1 {
+    padding: 10px; /* Reduce spacing for smaller screens */
+    font-size: medium; /* Further adjust font size for mobile */
+  }
+ 
+  .content-1 button {
+    margin: 10px 0;
+    padding: 8px 16px; /* Slightly adjust padding for buttons */
+    width: 70%;
+  }
+ 
+  .content img {
+    width: 100%; /* Ensure the image takes the full width of the container on mobile screens */
+  }
+}
+ 
+/* -------------------------------------------------- */
+ 
+/* WORKPAGE CSS */
+ 
+.container-2 {
+  display: flex; /* Use flexbox to create a side-by-side layout */
+  margin-top: 0px;
+}
+.content-2 {
+  flex: 1; /* Allow the content to grow and take available space */
+  padding: 50px 0px 0px 100px; /* Add some spacing */
+  font-weight: bold;
+  color: rgb(66, 163, 163);
+  font-size: x-large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.content-2 button {
+  margin: 0px 0px;
+  padding: 0px 20px 0px 20px;
+  color: rgb(66, 163, 163);
+  background-color: white;
+  border: 1px solid rgb(66, 163, 163);
+  font-weight: normal;
+  transition: background-color 0.3s;
+}
+.content-2 button:hover {
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.153
+  ); /* Change the background color on hover */
+  color: black; /* Change the text color on hover */
+}
+.content-3 {
+  flex: 2.2;
+  padding: 50px 50px 50px 100px;
+}
+.content-3 h2 {
+  font-weight: bold;
+  font-size: larger;
+}
+.content-3 button {
+  margin: 50px 0px;
+  padding: 10px 50px 10px 50px;
+  color: rgb(66, 163, 163);
+  background-color: white;
+  border: 1px solid rgb(66, 163, 163);
+  font-weight: normal;
+  transition: background-color 0.3s;
+}
+.content-3 button:hover {
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.153
+  ); /* Change the background color on hover */
+  color: black; /* Change the text color on hover */
+}
+.content-3 ul {
+  list-style-type: disc; /* or "circle" or "square" */
+}
+ 
+@media (max-width: 768px) {
+  .container-2 {
+    display: flex; /* Use flexbox to create a side-by-side layout */
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .content-2,
+  .content-3 {
+    padding: 10px; /* Reduce spacing for smaller screens */
+    font-size: medium; /* Further adjust font size for mobile */
+  }
+ 
+  .content-2 button,
+  .content-3 button {
+    margin: 10px 0;
+    padding: 8px 16px; /* Slightly adjust padding for buttons */
+  }
+}
+/*
+------------------------------------------------------------ */
+ 
+.button-container {
+  position: absolute;
+  top: 1px;
+  z-index: 1000;
+  display: flex;
+  right: 100px;
+  justify-content: space-between;
+  text-align: center;
+}
+.button-content-img {
+  display: flex;
+  background-color: white;
+  /* background-color: rgb(66, 163, 163); */
+  /* color:black; Set the button text color */
+  padding: 10px 20px 10px 20px;
+  margin: 5px;
+  /* Adjust the spacing between buttons */
+  border: none;
+  cursor: pointer;
+}
+.button-content-img:hover {
+  background-color: grey;
+  /* Change background color on hover */
+}
+.button-content-img span {
+  color: black;
+  /* padding-right: 20px; */
+  font-size: large;
+}
+ 
+.button-content-img img {
+  width: 24px;
+  /* Adjust the width as needed */
+  height: 24px;
+  /* Adjust the height as needed */
+}
+ 
+@media (max-width: 768px) {
+  .button-container {
+    top: 10px; /* Adjust the top position for smaller screens */
+    right: 10px; /* Further adjust the right position for mobile */
+  }
+ 
+  .button-content-img {
+    padding: 3px 5px; /* Further adjust padding for mobile */
+  }
+ 
+  .button-content-img img {
+    width: 20px; /* Further adjust image width for mobile */
+    height: 20px; /* Further adjust image height for mobile */
+  }
+}
+ 
+/* Intervenue css */
+.container-3 {
+  display: flex;
+ 
+}
+ 
+.content-5 {
+  flex: 1; /* Allow the content to grow and take available space */
+  padding: 50px 0px 0px 100px; /* Add some spacing */
+  font-weight: bold;
+  color: rgb(66, 163, 163);
+  font-size: x-large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.content-4 {
+  flex: 3;
+  padding: 50px 50px 50px 100px;
+}
+.content-4 ul {
+  list-style-type: disc; /* or "circle" or "square" */
+}
+.content-4 h3 {
+  font-weight: 400;
+  font-size: x-large;
+}
+.content-4 button {
+  margin: 0px 0px;
+  padding: 10px 20px 10px 20px;
+  color: rgb(66, 163, 163);
+  background-color: white;
+  border: 1px solid rgb(66, 163, 163);
+  font-weight: normal;
+  transition: background-color 0.3s;
+}
+.content-4 button:hover {
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.153
+  ); /* Change the background color on hover */
+  color: black; /* Change the text color on hover */
+}
+ 
+@media (max-width: 768px) {
+  .container-3 {
+    flex-direction: column;
+  }
+  .content-5,
+  .content-4 {
+    padding: 10px; /* Reduce spacing for smaller screens */
+    font-size: medium; /* Further adjust font size for mobile */
+  }
+ 
+  .content-4 button {
+    margin: 10px 0;
+    padding: 8px 16px; /* Slightly adjust padding for buttons */
+  }
+}
+ 
+/* CHART CSS-------------------------------------------------------------- */
+ 
+.button-container__1 {
+  position: absolute;
+ 
+  z-index: 1;
+ 
+  display: flex;
+  right: 100px;
+  justify-content: space-between;
+  text-align: center;
+}
+.button-5 {
+  border-radius: 4px;
+  padding: 9px 18px 9px 18px;
+  cursor: pointer;
+  /* margin-left: 20%; */
+}
+.text-item4 {
+  position: relative;
+  display: inline-block;
+ 
+  background-color: #22282694;
+  color: white;
+  border: 2px solid black;
+ 
+  margin-left: 60%;
+}
+.text-item4 .upper-dropdown {
+  display: block;
+}
+.text-item6 {
+  display: flex;
+  flex-direction: row;
+  padding-right: 50px;
+  margin-right: 50px; /* Adjust this value to control the spacing between images and text */
+  font-weight: bold;
+  font-size: larger;
+}
+@media (max-width: 768px) {
+  .button-container__1 {
+    /* top: 20; */
+ 
+    text-align: left;
+    justify-content: space-between;
+    position: absolute;
+    right: 10px; /* Further adjust the right position for mobile */
+    /* margin-left: 20%;
+  */
+  }
+  #ResponsiveContainer {
+    width: 80%; /* Adjust the width accordingly */
+    margin: 0 auto; /* Center the chart on smaller screens */
+  }
+ 
+  .button-content-img {
+    padding: 3px 5px; /* Further adjust padding for mobile */
+  }
+ 
+  .button-content-img img {
+    width: 20px; /* Further adjust image width for mobile */
+    height: 20px; /* Further adjust image height for mobile */
+  }
+  .text-item4 {
+    /* margin-top: 5px; */
+    width: 20%;
+    margin-left: 70%;
+  }
+ 
+  .text1 {
+    padding: 10px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .text-item4 {
+    margin-top: 5px;
+    width: 20%;
+    margin-left: 0px;
+  }
+ 
+  .button-4 {
+    /* padding: 5px 10px; */
+  }
+  .upper-dropdown {
+    width: 200%; /* Make the dropdown full width on mobile */
+  }
+}
+ 
+.incorrect-password {
+  border: 2px solid red;
+}
+ 
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+ 
+ 
+/* slider */
+.slick-slide > div{
+  margin: 0 10px;
+}  
+ 
+ 
+ 
+ 
+.arrow-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+ 
+.arrow-icon {
+  color: gray;
+  width: 50px;
+  height: 50px;
+  transition: color 0.3s ease;
+}
+ 
+.arrow-button:hover .arrow-icon {
+  color: black;
+}
+ 
+ 
+.slick-next:before {
+  display: none !important;
+}
+.slick-prev, .slick-next {
+  margin: -23px;
+  display: none;
+}
+.slick-prev::before{
+  display: hidden;
+}
+/* Map in report an incident pagae */
+.custom-map-container {
+  z-index: 40;
+ 
+}
+.slick-prev::before{
+  display: none;
+  background: black;
+}
